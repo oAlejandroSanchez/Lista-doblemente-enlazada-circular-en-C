@@ -1,16 +1,9 @@
-/*Nombre: Sánchez Pérez Omar Alejandro
-
-Problema:
-Elaborar una lista doblemente enlazada que funcione en memoria principal.
-
-*/
-
-//Definición de librerías
+//DefiniciÃ³n de librerÃ­as
 #include "stdio.h"
 #include "stdlib.h"
 #include "ctype.h"
 
-//Definición de variables
+//DefiniciÃ³n de variables
 typedef struct _Nodo{
 	
 	struct _Nodo *anterior;
@@ -24,7 +17,7 @@ typedef struct _Nodo{
 Lista *lista_principio = NULL;
 Lista *lista_final = NULL;
 
-//Definición de funciones secundarias
+//DefiniciÃ³n de funciones secundarias
 void Menu(void);
 void Inciso_a(void);
 Lista *Ingresar_elementos(Lista *,Lista *);
@@ -46,7 +39,7 @@ int Inciso_e(void);
 
 void Opcion_invalida(void);
 
-//Función principal
+//FunciÃ³n principal
 int main(void){
 	
 	char opcion;
@@ -65,7 +58,7 @@ int main(void){
 	
 }
 
-//Muestra en pantalla el menú de opciones del programa principal
+//Muestra en pantalla el menÃº de opciones del programa principal
 void Menu(void){
 	
 	char opcion;
@@ -129,7 +122,7 @@ void Menu(void){
 	
 }
 
-//La función del inciso (a), permite al usuario ingresar elementos
+//La funciÃ³n del inciso (a), permite al usuario ingresar elementos
 //a la base de datos
 void Inciso_a(void){
 	
@@ -207,7 +200,7 @@ void Inciso_a(void){
 	
 }
 
-//Esta función acomoda todos los elementos ingresado en una lista circular
+//Esta funciÃ³n acomoda todos los elementos ingresado en una lista circular
 //doblemente enlazada
 Lista *Ingresar_elementos(Lista *nodo_auxiliar,Lista *lista_auxiliar){
 	
@@ -229,8 +222,8 @@ Lista *Ingresar_elementos(Lista *nodo_auxiliar,Lista *lista_auxiliar){
 	
 }
 
-//La función del inciso (b) verifica si la lista se encuentra vacía, en caso de no ser así
-//se manda a llamar otra función para que muestre los datos contenidos dentro de la lista.
+//La funciÃ³n del inciso (b) verifica si la lista se encuentra vacÃ­a, en caso de no ser asÃ­
+//se manda a llamar otra funciÃ³n para que muestre los datos contenidos dentro de la lista.
 void Inciso_b(void){
 	
 	system("cls");
@@ -253,7 +246,7 @@ void Inciso_b(void){
 		
 }
 
-//Esta función desplega un menú de opciones, permitiendole al usuario elegir en que
+//Esta funciÃ³n desplega un menÃº de opciones, permitiendole al usuario elegir en que
 //forma desea que se muestren los datos ingresados en la lista.
 void Menu_mostrar_elementos(void){
 	
@@ -294,7 +287,7 @@ void Menu_mostrar_elementos(void){
 	
 }
 
-//Esta función secundaria muestra en pantalla los datos ingresados hasta el momento
+//Esta funciÃ³n secundaria muestra en pantalla los datos ingresados hasta el momento
 //en la lista en el orden en que fueron ingresados.
 void lista_ordenada(void){
 	
@@ -316,7 +309,7 @@ void lista_ordenada(void){
 	
 }
 
-//Esta función secundaria muestra en pantalla los datos ingresados hasta el momento
+//Esta funciÃ³n secundaria muestra en pantalla los datos ingresados hasta el momento
 //en la lista en orden inverso.
 void lista_orden_inverso(void){
 	
@@ -338,7 +331,7 @@ void lista_orden_inverso(void){
 		
 }
 
-//La función del inciso (c) elimina toda la base de datos obtenida en la lista
+//La funciÃ³n del inciso (c) elimina toda la base de datos obtenida en la lista
 void Inciso_c(void){
 	
 	system("cls");
@@ -366,8 +359,8 @@ void Inciso_c(void){
 	
 }
 
-//La función del inciso (d) verifica si la lista se encuentra vacía, en caso de que no sea así
-//se manda a llamar una función secundaria que eliminará un elemento de la lista
+//La funciÃ³n del inciso (d) verifica si la lista se encuentra vacÃ­a, en caso de que no sea asÃ­
+//se manda a llamar una funciÃ³n secundaria que eliminarÃ¡ un elemento de la lista
 void Inciso_d(void){
 	
 	if(lista_principio == NULL){
@@ -388,7 +381,7 @@ void Inciso_d(void){
 	
 }
 
-//Esta función muestra en pantalla un menú, el usuario puede elegir en donde se hace la eliminación
+//Esta funciÃ³n muestra en pantalla un menÃº, el usuario puede elegir en donde se hace la eliminaciÃ³n
 //puede realizarse por delante o por detras de la lista
 void Eliminar_elementos(void){
 	
@@ -434,7 +427,7 @@ void Eliminar_elementos(void){
 	
 }
 
-//La eliminación se hace por delante de la lista
+//La eliminaciÃ³n se hace por delante de la lista
 void Eliminacion_por_delante(void){
 	
 	if(lista_principio == lista_final){
@@ -456,7 +449,7 @@ void Eliminacion_por_delante(void){
 	
 }
 
-//La eliminación se hace por detras de la lista
+//La eliminaciÃ³n se hace por detras de la lista
 void Eliminacion_por_detras(void){
 	
 	if(lista_final == lista_principio){
@@ -478,7 +471,7 @@ void Eliminacion_por_detras(void){
 	
 }
 
-//Muetsra un mensaje en la pantalla de que la eliminación se ha completado
+//Muetsra un mensaje en la pantalla de que la eliminaciÃ³n se ha completado
 //exitosamente
 void Eliminacion_hecha(void){
 	
@@ -492,14 +485,14 @@ void Eliminacion_hecha(void){
 	
 }
 
-//Esta función le permite al usuario finalizar el programa principal
+//Esta funciÃ³n le permite al usuario finalizar el programa principal
 int Inciso_e(void){
 	
 	exit(1);
 	
 }
 
-//En caso de que el usuario se equivoque al introducir una opción se mostrará
+//En caso de que el usuario se equivoque al introducir una opciÃ³n se mostrarÃ¡
 //en la pantalla un mensaje avisandole que lo intente de nuevo.
 void Opcion_invalida(void){
 	
